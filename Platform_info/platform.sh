@@ -7,11 +7,11 @@ function check_arch() {
     if [ "$os_name" = "linux" ]; then
         export elk_arch_type="$arch_type"
         export elk_os_name="$os_name"
-        echo "ELK architecture type: $elk_arch_type"
+        #echo "ELK architecture type: $elk_arch_type"
     elif [ "$os_name" = "darwin" ] && [ "$arch_type" = "arm64" ]; then
         export elk_arch_type="aarch64"
         export elk_os_name="$os_name"
-        echo "ELK architecture type: $elk_arch_type"
+        #echo "ELK architecture type: $elk_arch_type"
     else
         echo "The system is neither Linux nor Darwin."
     fi
