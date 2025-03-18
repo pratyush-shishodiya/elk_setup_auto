@@ -1,10 +1,13 @@
 #!/bin/bash
 
 #set -e  # Exit immediately if a command exits with a non-zero status
+#/Users/pratyushshishodiya/Desktop/Github_shell_scripts/ELK_Setup/ELK_download/ELK_packages/Elk_package.sh
+root_path=$(readlink -f ../../..)
+echo $root_path
 
 # Source required scripts
-source "/Users/pratyushshishodiya/Desktop/Github_shell_scripts/ELK_Setup/Platform_info/platform.sh"
-source "/Users/pratyushshishodiya/Desktop/Github_shell_scripts/ELK_Setup/ELK_download/Check_dir/check_and_create_dir.sh"
+source "$root_path/ELK_Setup/Platform_info/platform.sh"
+source "$root_path/ELK_Setup/ELK_download/Check_dir/check_and_create_dir.sh"
 
 # ELK packages list
 packages=("elasticsearch" "kibana" "logstash")
